@@ -1,3 +1,5 @@
+/* eslint-disable no-irregular-whitespace */
+import config from '../../config.json';
 export const banner = (): string => {
   return `
     
@@ -45,11 +47,11 @@ export const email = (): string => {
 };
 
 export const resume = (): string => {
-  return "Opening resume...";
+  return 'Opening resume...';
 };
 
 export const resume_jp = (): string => {
-  return "Opening resume_jp...";
+  return 'Opening resume_jp...';
 };
 
 export const repo = (): string => {
@@ -57,5 +59,27 @@ export const repo = (): string => {
 };
 
 //summary
+export const sumfetch = (): Promise<string> => {
+  return Promise.resolve(`
+  
+           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  sumfetch
+        ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
+      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT
+    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ${config.name}
+   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓           <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓        <u><a href="${config.resume_jp_url}" target="_blank">resume</a></u>
+▐▓                                 ▐▓       爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
+▐▓                                 ▐▓       -----------
+▐▓         Let's Connect!          ▐▓        CONTACT 
+▐▓                                 ▐▓        <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓        <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
+   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓          
+    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
+      ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀            
+        ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
+            ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                 
+
+`);
+};
 
 // api
