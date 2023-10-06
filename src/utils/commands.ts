@@ -11,18 +11,20 @@ export const banner = (): string => {
   ░░░░░░░░░░   ░░░░░░░░░              ░░░░░░░░   ░░░░░░░░  ░░░░░░░░░░       ░░░░░  
                                                                                    
                                                                                                                                                             
-    Type 'help' to see the list of available commands.
-    Type 'sumfetch' to display summary.
-    Type 'repo' or click  `;
+  Type 'help' to see the list of available commands.
+  Type 'sumfetch' to display summary.
+  Type 'repo' or click  `;
 }; //DOS Rebel
 
 export const about = (): string => {
-  return `Hi, I am EC-9624. 
-      Welcome to my website!
-      More about me:
-      'sumfetch' - short summary.
-      'resume' - my latest resume.
-      'readme' - my github readme.`;
+  return `
+  Hi, I am EC-9624. 
+  Welcome to my website!
+  More about me:
+  'sumfetch' - short summary.
+  'resume' - my latest resume.
+  'readme' - my github readme.
+  `;
 };
 
 //Contact
@@ -41,3 +43,19 @@ export const linkedIn = (): string => {
 export const email = (): string => {
   return `email@email.com`;
 };
+
+export const resume = (): string => {
+  return "Opening resume...";
+};
+
+export const resume_jp = (): string => {
+  return "Opening resume_jp...";
+};
+
+export const repo = (): string => {
+  return `repo...`;
+};
+
+//summary
+
+// api
