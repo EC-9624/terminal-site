@@ -1,5 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 import config from '../../config.json';
+import * as apis from './apis';
+
 export const banner = (): string => {
   return `
     
@@ -82,4 +84,16 @@ export const sumfetch = (): Promise<string> => {
 `);
 };
 
-// api
+// api Commands
+
+export const readme = (): Promise<string> => {
+  const result = apis.getReadme();
+  return result;
+};
+
+export const projects = (): Promise<string> => {
+  const result = apis.getProject();
+  return result;
+};
+
+//weather
