@@ -97,3 +97,14 @@ export const projects = (): Promise<string> => {
 };
 
 //weather
+
+export const weather = async (args: string[]): Promise<string> => {
+  const city = args.join('+');
+
+  if (!city) {
+    return 'Usage: weather [city]. Example: weather casablanca';
+  }
+
+  const result = await apis.getWeather(city);
+  return result;
+};
