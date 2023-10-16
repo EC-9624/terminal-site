@@ -13,9 +13,7 @@ export const getProject = async () => {
     `https://api.github.com/users/${config.social.github}/repos`,
   );
 
-  const nonForkedRepos = data.filter((repo) => !repo.fork);
-  console.log(nonForkedRepos);
-  return nonForkedRepos;
+  return data;
 };
 
 export const getWeather = async (city: string) => {
