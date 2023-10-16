@@ -1,12 +1,10 @@
-import React from 'react';
-
 function Ps1() {
   return (
     <div>
-      <span className="text-light-yellow dark:text-dark-yellow">Visitor</span>
-      <span className="text-light-gray dark:text-dark-gray">@</span>
-      <span className="text-light-green dark:text-dark-green">EC-9624</span>
-      <span className="text-light-gray dark:text-dark-gray">:$ ~ </span>
+      <span className="text-yellow-500">Visitor</span>
+      <span className="text-gray-600">@</span>
+      <span className="text-green-800">EC-9624</span>
+      <span className="text-gray-600">:$ ~ </span>
     </div>
   );
 }
