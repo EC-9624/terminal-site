@@ -1,13 +1,7 @@
-import Ps1 from './Ps1';
+import Ps1 from '../Ps1';
+import { History as HistoryInterface } from './Interface';
 
-interface HistoryInterface {
-  id: number;
-  date: Date;
-  command: string;
-  output: string;
-}
-
-function InputHistory({ history }: { history: Array<HistoryInterface> }) {
+function History({ history }: { history: Array<HistoryInterface> }) {
   return (
     <>
       {history.map((entry: HistoryInterface, index: number) => (
@@ -31,4 +25,4 @@ function InputHistory({ history }: { history: Array<HistoryInterface> }) {
   );
 }
 
-export default InputHistory;
+export default History;
