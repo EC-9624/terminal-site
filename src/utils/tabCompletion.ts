@@ -1,0 +1,14 @@
+import * as cmds from './commands';
+
+export function handleTabCompleteion(
+  command: string,
+  setCommand: React.Dispatch<React.SetStateAction<string>>,
+) {
+  const commands = Object.keys(cmds).filter((entry) =>
+    entry.startsWith(command),
+  );
+
+  if (commands.length === 1) {
+    setCommand(commands[0]);
+  }
+}
