@@ -43,7 +43,7 @@ const App: React.FC<IndexPageProps> = () => {
     <>
       <main className="bg-foreground dark:bg-dark-background w-full h-full p-2">
         <div
-          className="text-background min-w-max text-xs md:min-w-full md:-text-base"
+          className="text-background min-w-max text-xl md:min-w-full md:-text-base"
           onClick={onClickedAnywhere}
         >
           <div ref={containerRef} className="overflow-y-auto h-full">
