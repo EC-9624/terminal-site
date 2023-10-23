@@ -3,6 +3,8 @@ import config from '../../config.json';
 import * as apis from './apis';
 
 
+
+
 export const banner = (): string =>{
   return`
 ███████╗ ██████╗               █████╗  ██████╗ ██████╗ ██╗  ██╗
@@ -50,8 +52,8 @@ export const resume = (): string => {
   return 'Opening resume...';
 };
 
-export const resume_jp = (): string => {
-  return 'Opening resume_jp...';
+export const rirekisho = (): string => {
+  return 'Opening japanese resume...';
 };
 
 export const repo = (): string => {
@@ -59,26 +61,43 @@ export const repo = (): string => {
 };
 
 //summary 
-export const summary = (): Promise<string> => {
-  return Promise.resolve(`
-           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                 🏠 summary
-        ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
-      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄            💻 ABOUT
-    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           👤 ${config.name}
-   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓          📰 <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       🌐 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
-▐▓                                 ▐▓       -----------
-▐▓         > C O N N E C T         ▐▓       @  CONTACT 
-▐▓                                 ▐▓       📧 <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓         <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓            <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u>
-    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
-      ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀            
-        ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
-            ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
+// export const summary = (): Promise<string> => {
+//   return Promise.resolve(`
+//            ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                 summary
+//         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
+//       ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄            💻 ABOUT
+//     ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           👤 ${config.name}
+//    ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓          📰 <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+// ▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       🌐 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
+// ▐▓                                 ▐▓       -----------
+// ▐▓         > C O N N E C T         ▐▓       @  CONTACT 
+// ▐▓                                 ▐▓       📧 <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+// ▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓         <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
+//    ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓            <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u>
+//     ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
+//       ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀            
+//         ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
+//             ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
 
-`);
-};
+// `);
+// };
+export const summary = (): string =>{
+  return`<div class="summary">
+  <img src="../../public/id-card-solid.svg" alt="Your SVG Image" style="height: 30px; display: inline-block;"> summary
+  
+  <hr>
+  <h3>💻 ABOUT</h3>
+  <p>👤 ${config.name}</p>
+  <p>📰 <u><a href="${config.resume_url}" target="_blank">resume</a></u></p>
+  <p>🌐 <u><a href="${config.repo}" target="_blank">Github repo</a></u></p>
+  <hr>
+  <h3>@ CONTACT</h3>
+  <p>📧 <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u></p>
+  <p>  <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u></p>
+  <p>  <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u></p>
+</div>
+`;
+}
 
 // api Commands
 

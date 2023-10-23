@@ -21,9 +21,8 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
             className="whitespace-pre-wrap mb-2"
             style={{ lineHeight: 'normal' }}
             dangerouslySetInnerHTML={{ __html: entry.output }}
-          >
-            
-          </pre>
+          />
+          
         </div>
       ))}
     </>
