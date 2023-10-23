@@ -59,19 +59,19 @@ export const repo = (): string => {
 };
 
 //summary 
-export const sumfetch = (): Promise<string> => {
+export const summary = (): Promise<string> => {
   return Promise.resolve(`
-           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  sumfetch
+           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                 🏠 summary
         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
-      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT
-    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ${config.name}
-   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓           <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
+      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄            💻 ABOUT
+    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           👤 ${config.name}
+   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓          📰 <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       🌐 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
 ▐▓                                 ▐▓       -----------
-▐▓        > L I V E T E R M        ▐▓        CONTACT 
-▐▓                                 ▐▓        <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓        <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓           <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u>
+▐▓         > C O N N E C T         ▐▓       @  CONTACT 
+▐▓                                 ▐▓       📧 <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓         <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
+   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓            <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u>
     ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
       ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀            
         ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
@@ -79,6 +79,7 @@ export const sumfetch = (): Promise<string> => {
 
 `);
 };
+
 // api Commands
 
 export const readme = (): Promise<string> => {
@@ -108,27 +109,33 @@ export const weather = async (args: string[]): Promise<string> => {
 
 export const help = (): string => {
   const commands : {[key : string] : string} = {
-    banner: 'Display the banner.',
-    about: 'Display information about you.',
-    github: 'Open GitHub.',
-    wantedly: 'Open Wantedly.',
-    linkedin: 'Open LinkedIn.',
-    email: 'Display your email address.',
-    resume: 'Open your resume.',
-    resume_jp: 'Open your Japanese resume.',
-    repo: 'Display information about your GitHub repository.',
-    sumfetch: 'Display a summary.',
-    readme: 'Get the readme from your GitHub repository.',
-    projects: 'Get information about your projects.',
-    weather: 'Get weather information for a city. Usage: weather [city]',
-    help: 'Display this list of available commands.',
+    banner:'Display the banner.',
+    about:'About me.',
+    github:'Open GitHub.',
+    wantedly:'Open Wantedly.',
+    linkedin:'Open LinkedIn.',
+    email:'Display email address.',
+    resume:'Open resume.',
+    resume_jp:'Open Japanese resume .',
+    repo:'Display GitHub repository information.',
+    summary:'Display a summary.',
+    readme:'Display Github readme.',
+    projects:'Get projects information.',
+    weather:'Get weather information for a city. Usage: weather [city]',
+    help:'Display list of available commands.',
   } ;
 
-  let commandList = 'Hi there ! here are all available commands:\n\n';
+  let commandList = '\nHi there! here are all available commands:\n\n';
 
   for (const command in commands) {
     commandList += `${command}: ${commands[command]}\n`;
   }
 
-  return commandList;
+  return`
+${commandList}
+[tab]: trigger completion.
+[ctrl+l]/clear: clear terminal.
+Type 'summary' to display summary.
+`
+;
 };
