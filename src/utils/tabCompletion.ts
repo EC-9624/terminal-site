@@ -1,6 +1,6 @@
 import * as cmds from './commands';
 
-export function handleTabCompleteion(
+export function handleTabCompletion(
   command: string,
   setCommand: React.Dispatch<React.SetStateAction<string>>,
 ) {

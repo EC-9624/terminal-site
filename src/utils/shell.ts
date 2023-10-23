@@ -5,7 +5,7 @@ export async function shell(
   command: string,
   setHistory: (value: string) => void,
   clearHistory: () => void,
-  setCommand: React.Dispatch<React.SetStateAction<string>>, //typeScript Wrapper For setState
+  setCommand: React.Dispatch<React.SetStateAction<string>>, //typeScript Wrapper For setState : string
 ) {
   const args = command.split(' ');
   args[0] = args[0].toLowerCase();

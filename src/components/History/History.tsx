@@ -1,7 +1,10 @@
-import Ps1 from '../Ps1';
+import React from 'react';
 import { History as HistoryInterface } from './Interface';
+import Ps1 from '../Ps1';
 
-function History({ history }: { history: Array<HistoryInterface> }) {
+export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
+  history,
+}) => {
   return (
     <>
       {history.map((entry: HistoryInterface, index: number) => (
@@ -14,15 +17,15 @@ function History({ history }: { history: Array<HistoryInterface> }) {
             <div className="flex-grow">{entry.command}</div>
           </div>
 
-          <p
+          <pre
             className="whitespace-pre-wrap mb-2"
             style={{ lineHeight: 'normal' }}
-            dangerouslySetInnerHTML={{ __html: entry.output }} //setinnerHTML
+            dangerouslySetInnerHTML={{ __html: entry.output }}
           />
         </div>
       ))}
     </>
   );
-}
+};
 
 export default History;
