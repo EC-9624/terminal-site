@@ -5,8 +5,8 @@ export default {
     colors: {
       black: '#2e3440',
       white: '#f7f7f7',
-      background: '#FBF1C9',
-      foreground: '#3C3836',
+      background: '#3C3836', //#FBF1C9
+      foreground: '#FBF1C9', //#3C3836
       yellow: '#D79921',
       green: '#98971A',
       gray: '#7C6F64',
