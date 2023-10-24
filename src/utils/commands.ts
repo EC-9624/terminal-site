@@ -2,9 +2,6 @@
 import config from '../../config.json';
 import * as apis from './apis';
 
-
-
-
 export const banner = (): string =>{
   return`
 ███████╗ ██████╗               █████╗  ██████╗ ██████╗ ██╗  ██╗
@@ -22,12 +19,12 @@ Type 'repo' or click `;
 
 export const about = (): string => {
   return `
-Hi, I am EC-9624. 
+Hi, I am Eakudompong Chanoknan. 
 Welcome to my website!
 More about me:
-  'sumfetch' - short summary.
-  'resume' - my latest resume.
-  'readme' - my github readme.
+'sumfetch' - short summary.
+'resume' - my latest resume.
+'readme' - my github readme.
 `;
 };
 
@@ -107,9 +104,18 @@ export const readme = (): Promise<string> => {
 };
 
 export const projects = (): Promise<string> => {
-  const result = apis.getProject();
-  return result;
+  return Promise.resolve(apis.getProject())
+    .then(data => {
+      const projectInfo = data.map((d: { name: string, html_url: string }) => ` <a href="${d.html_url}" style="text-decoration: underline;" target="_blank">${d.name}</a>`).join('<br>');
+      return `<p>Here are all the Repositories in my GitHub!</p>${projectInfo}`;
+    })
+    .catch(error => {
+      throw error;
+    });
 };
+
+
+
 
 //weather
 
