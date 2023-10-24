@@ -61,43 +61,43 @@ export const repo = (): string => {
 };
 
 //summary 
-// export const summary = (): Promise<string> => {
-//   return Promise.resolve(`
-//            ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                 summary
-//         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
-//       ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄            💻 ABOUT
-//     ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           👤 ${config.name}
-//    ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓          📰 <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-// ▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       🌐 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
-// ▐▓                                 ▐▓       -----------
-// ▐▓         > C O N N E C T         ▐▓       @  CONTACT 
-// ▐▓                                 ▐▓       📧 <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-// ▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓         <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-//    ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓            <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u>
-//     ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
-//       ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀            
-//         ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
-//             ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
+export const summary = (): Promise<string> => {
+  return Promise.resolve(`
+           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                 <img src="../../public/id-card-svgrepo-com.svg" alt="id card" style="height: 30px;  display: inline-block;"> summary
+        ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              ---------------------------
+      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄            <img src="../../public/terminal-svgrepo-com.svg" alt="terminal" style="height: 25px;  display: inline-block; "> ABOUT
+    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           <img src="../../public/user-avatar-profile-svgrepo-com.svg" alt="avatar" style="height: 20px; display: inline-block;"> ${config.name}
+   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓          <img src="../../public/report-svgrepo-com (1).svg" alt="report" style="height: 25px;  display: inline-block;"> <a href="${config.resume_url}" target="_blank" style="text-decoration: underline;">resume</a>
+▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       <img src="../../public/world-o-svgrepo-com.svg" alt="world" style="height: 20px;  display: inline-block;"> <a href="${config.repo}" target="_blank" style="text-decoration: underline;">Github repo</a>
+▐▓                                 ▐▓       ---------------------------
+▐▓         > C O N N E C T         ▐▓       <img src="../../public/at-sign-svgrepo-com.svg" alt="world" style="height: 30px;  display: inline-block;"> CONTACT 
+▐▓                                 ▐▓       <img src="../../public/mail-svgrepo-com (2).svg" alt="world" style="height: 30px; display: inline-block;"> <a href="mailto:${config.email}" target="_blank" style="text-decoration: underline;">${config.email}</a>
+▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓       <img src="../../public/github-svgrepo-com (1).svg" alt="github" style="height: 30px;  display: inline-block;"> <a href="https://github.com/${config.social.github}" target="_blank" style="text-decoration: underline;">github.com/${config.social.github}</a>
+   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓          <img src="../../public/linkedin-svgrepo-com.svg" alt="linkedin" style="height: 30px;  display: inline-block;"> <a href="https://linkedin.com/in/$" target="_blank" style="text-decoration: underline;" >linkedin.com/in/$</a>
+    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           <img src="../../public/Wantedly_Mark_Wht.svg" alt="linkedin" style="height: 25px;  display: inline-block;"> <a href="https://linkedin.com/in/$" target="_blank" style="text-decoration: underline;" >linkedin.com/in/$</a>
+      ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀            ---------------------------
+        ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
+            ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
 
-// `);
-// };
-export const summary = (): string =>{
-  return`<div class="summary">
-  <img src="../../public/id-card-solid.svg" alt="Your SVG Image" style="height: 30px; display: inline-block;"> summary
-  
-  <hr>
-  <h3>💻 ABOUT</h3>
-  <p>👤 ${config.name}</p>
-  <p>📰 <u><a href="${config.resume_url}" target="_blank">resume</a></u></p>
-  <p>🌐 <u><a href="${config.repo}" target="_blank">Github repo</a></u></p>
-  <hr>
-  <h3>@ CONTACT</h3>
-  <p>📧 <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u></p>
-  <p>  <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u></p>
-  <p>  <u><a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a></u></p>
-</div>
-`;
-}
+`);
+};
+// export const summary = (): string =>{
+//   return`<div class="summary">
+ 
+//   <img src="../../public/id-card-solid.svg" alt="id card" style="height: 30px;  display: inline-block;"> summary
+//   -----------
+//   <img src="../../public/terminal.svg" alt="terminal" style="height: 25px; width: 30px; display: inline-block; line-height: 2;"> ABOUT
+//   <img src="../../public/person-svgrepo-com.svg" alt="avatar" style="height: 25px; width: 30px;  display: inline-block; line-height: 2;"> ${config.name}
+//   <img src="../../public/report-svgrepo-com.svg" alt="report" style="height: 25px; width: 30px; display: inline-block; line-height: 2;"> <a href="${config.resume_url}" target="_blank">resume</a>
+//   <img src="../../public/world-svgrepo-com.svg" alt="world" style="height: 25px; width: 30px; display: inline-block; line-height: 2;"> <a href="${config.repo}" target="_blank">Github repo</a>
+//   -----------
+//   <img src="../../public/at.svg" alt="world" style="height: 30px; display: inline-block; line-height: 2;"> CONTACT
+//   <img src="../../public/email-1-svgrepo-com.svg" alt="world" style="height: 30px; display: inline-block; line-height: 2;"> <a href="mailto:${config.email}" target="_blank">${config.email}</a>
+//   <img src="../../public/github.svg" alt="world" style="height: 30px; display: inline-block;" line-height: 2;> <a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a>
+//   <img src="../../public/linkedin-in.svg" alt="world" style="height: 25px; width: 25px; display: inline-block; line-height: 2;"> <a href="https://linkedin.com/in/$" target="_blank">linkedin.com/in/$</a>
+// </div>
+// `;
+// }
 
 // api Commands
 
