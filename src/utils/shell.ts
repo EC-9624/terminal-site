@@ -15,7 +15,7 @@ export async function shell(
     setHistory('');
   } else if (Object.keys(cmds).indexOf(args[0]) === -1) {
     setHistory(
-      `shell error: command not found ${args[0]}. Try 'help' to get started.`,
+      `shell : command not found ${args[0]}. Try 'help' to get started.`,
     );
   } else {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

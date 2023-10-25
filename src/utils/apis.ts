@@ -18,7 +18,7 @@ export const getProject = async () => {
 
 export const getWeather = async (city: string) => {
   try {
-    const { data } = await axios.get(`https://wttr.in/${city}?ATm`);
+    const { data } = await axios.get(`https://wttr.in/${city}?ATm&lang=en`);
     return data;
   } catch (error) {
     return error;

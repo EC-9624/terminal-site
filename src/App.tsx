@@ -4,7 +4,6 @@ import { useHistory } from './components/History/Hook';
 import History from './components/History/History';
 import { banner } from './utils/commands';
 
-
 const App: React.FC = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -14,7 +13,7 @@ const App: React.FC = () => {
     }
   };
 
-  const containerRef = useRef(null);
+  const containerRef = useRef(null); // ref for History
   const {
     history,
     command,
