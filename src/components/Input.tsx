@@ -41,14 +41,13 @@ function Input({
       event.preventDefault();
       setLastCommandIndex(0);
       await shell(command, setHistory, clearHistory, setCommand);
-    
+
       // Assuming that `containerRef.current` is a reference to the container element
       // and you want to scroll it to the bottom
       if (containerRef.current) {
         containerRef.current.scrollTop = containerRef.current.scrollHeight;
       }
     }
-    
 
     if (event.key === 'ArrowUp') {
       event.preventDefault();
@@ -93,9 +92,7 @@ function Input({
         id="prompt"
         type="text"
         className={`bg-background focus:outline-none flex-grow ${
-          commandExists(command) || command === ''
-            ? 'text-green'
-            : 'text-red'
+          commandExists(command) || command === '' ? 'text-green' : 'text-red'
         }`}
         value={command}
         onChange={onChange}

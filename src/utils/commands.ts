@@ -115,7 +115,10 @@ export const summary = (): Promise<string> => {
 // api Commands
 
 export const readme = (): Promise<string> => {
-  const result = apis.getReadme();
+  const result = Promise.resolve(apis.getReadme()).then((data) => {
+    console.log(data);
+    return data;
+  });
   return result;
 };
 

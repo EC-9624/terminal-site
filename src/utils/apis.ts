@@ -3,7 +3,6 @@ import axios from 'axios';
 
 export const getReadme = async () => {
   const { data } = await axios.get(config.readmeUrl);
-  console.log(data);
   return data;
 };
 
