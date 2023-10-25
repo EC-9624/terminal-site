@@ -8,7 +8,7 @@ export async function shell(
   setCommand: React.Dispatch<React.SetStateAction<string>>, //typeScript Wrapper For setState : string
 ) {
   const args = command.split(' ');
-  args[0] = args[0].toLowerCase();
+  args[0] = args[0].toLowerCase(); 
   if (args[0] === 'clear') {
     clearHistory();
   } else if (command === '') {
@@ -19,7 +19,7 @@ export async function shell(
     );
   } else {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const output = await (cmds as any)[args[0]](args.slice(1));
+    const output = await cmds[args[0]](args.slice(1)); //arg[0] is a command in cmds  args.slice(1) is an arg[0] arguments IE: cmds["weather"](tokyo) 
 
     setHistory(output);
   }
