@@ -67,6 +67,3 @@ export async function get_repo() {
     );
   }
 }
-
-// Usage: Call the get_repo function to fetch and process data
-get_repo();

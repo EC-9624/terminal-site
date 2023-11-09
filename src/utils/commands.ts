@@ -140,7 +140,7 @@ export const projects = (): Promise<string> => {
             ` <a href="${d.html_url}" style="text-decoration: underline;" target="_blank">${d.name}</a>`,
         )
         .join('<br>');
-      return `<p>Here are my pinned projects on my GitHub!</p>${projectInfo}
+      return `<p>Here are pinned projects on my GitHub!</p>${projectInfo}
       <p>For more porjects type 'github' or click <a href="https://github.com/EC-9624/" target="_blank" style="text-decoration: underline;">here</a></p>`;
     })
     .catch((error) => {
