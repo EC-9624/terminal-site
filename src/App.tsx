@@ -39,7 +39,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <main className="bg-background dark:bg-dark-background w-full p-8 overflow-auto scroll-smooth h-full  border-white rounded-lg border-2">
+      <main className="bg-background dark:bg-dark-background w-full p-8 overflow-auto scroll-smooth h-full  border-foreground rounded-lg border-2 ">
         <div
           className="text-foreground min-w-max text-xl md:min-w-full md:-text-base overflow-auto h-full"
           onClick={() => onClickedAnywhere()}
