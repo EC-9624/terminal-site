@@ -14,7 +14,7 @@ export const banner = (): string => {
 
 Type 'help' to see the list of available commands.
 Type 'summary' to display summary.
-Type 'repo' or click `;
+Type 'gui' or click <a href="https://portfolio-ec-9624.vercel.app/" target="_blank" style="text-decoration: underline;">here</a> for a gui version.`;
 }; //current ANSI Shadow , old : DOS Rebel
 
 export const about = (): string => {
@@ -29,6 +29,11 @@ More about me:
 };
 
 //Contact
+
+export const gui = (): string => {
+  window.open(`https://portfolio-ec-9624.vercel.app/`);
+  return `Opening GUI-site...`;
+};
 export const github = (): string => {
   window.open(`https://www.github.com/${config.social.github}`);
   return `Opening gitHub...`;
@@ -50,12 +55,16 @@ export const email = (): string => {
 };
 
 export const resume = (): string => {
-  window.open(`https://resume-resource.com/pdf/exbc10.pdf`); //placeHolder add my Resume Later
+  window.open(
+    `https://www.dropbox.com/scl/fi/ycmfaijbpxv997gmdnvld/E_Chanoknan_resume_v1.pdf?rlkey=ake9jzxnv2aw9xpco5b3vrn2p&dl=0`,
+  ); //placeHolder add my Resume Later
   return 'Opening resume...';
 };
 
 export const rirekisho = (): string => {
-  window.open(`https://resume-resource.com/pdf/exbc10.pdf`); //placeHolder add my Resume Later
+  window.open(
+    `https://www.dropbox.com/scl/fi/57ja1ms5v7ms1o95e2mfn/E_Chanoknan_-_v1.pdf?rlkey=c8xvqvopfsg3jou5er1zr2mfy&dl=0`,
+  ); //placeHolder add my Resume Later
   return 'Opening japanese resume...';
 };
 
@@ -122,7 +131,7 @@ export const readme = (): Promise<string> => {
 };
 
 export const projects = (): Promise<string> => {
-  return Promise.resolve(apis.getProject())
+  return Promise.resolve(apis.get_repo())
     .then((data) => {
       console.log(data);
       const projectInfo = data
@@ -131,7 +140,8 @@ export const projects = (): Promise<string> => {
             ` <a href="${d.html_url}" style="text-decoration: underline;" target="_blank">${d.name}</a>`,
         )
         .join('<br>');
-      return `<p>Here are all the Repositories in my GitHub!</p>${projectInfo}`;
+      return `<p>Here are my pinned projects on my GitHub!</p>${projectInfo}
+      <p>For more porjects type 'github' or click <a href="https://github.com/EC-9624/" target="_blank" style="text-decoration: underline;">here</a></p>`;
     })
     .catch((error) => {
       throw error;
@@ -169,6 +179,7 @@ export const help = (): string => {
     projects: 'Get projects information.',
     weather: 'Get weather information for a city. Usage: weather [city]',
     help: 'Display list of available commands.',
+    gui: 'Open to gui version of this site',
   };
 
   let commandList = '\nHi there! here are all available commands:\n\n';

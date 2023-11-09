@@ -4,6 +4,7 @@ import { commandExists } from '../utils/commandExists';
 import { shell } from '../utils/shell';
 import { handleTabCompletion } from '../utils/tabCompletion';
 
+//take destructured useHistory hooks as an args
 function Input({
   inputRef,
   containerRef,
@@ -14,9 +15,11 @@ function Input({
   setHistory,
   setLastCommandIndex,
   clearHistory,
-}: any) {
+}: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+any) {
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     const commands: [string] = history
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map(({ command }: any) => command)
       .filter((command: string) => command);
 
