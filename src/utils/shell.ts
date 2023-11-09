@@ -19,7 +19,7 @@ export async function shell(
     );
   } else {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const output = await cmds[args[0]](args.slice(1)); //arg[0] is a function in cmds  args.slice(1) is an arg[0] arguments IE: weather(tokyo)
+    const output = await (cmds as any)[args[0]](args.slice(1)); //arg[0] is a function in cmds  args.slice(1) is an arg[0] arguments IE: weather(tokyo)
 
     setHistory(output);
   }
