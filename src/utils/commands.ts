@@ -57,14 +57,14 @@ export const email = (): string => {
 export const resume = (): string => {
   window.open(
     `https://www.dropbox.com/scl/fi/ycmfaijbpxv997gmdnvld/E_Chanoknan_resume_v1.pdf?rlkey=ake9jzxnv2aw9xpco5b3vrn2p&dl=0`,
-  ); //placeHolder add my Resume Later
+  );
   return 'Opening resume...';
 };
 
 export const rirekisho = (): string => {
   window.open(
     `https://www.dropbox.com/scl/fi/57ja1ms5v7ms1o95e2mfn/E_Chanoknan_-_v1.pdf?rlkey=c8xvqvopfsg3jou5er1zr2mfy&dl=0`,
-  ); //placeHolder add my Resume Later
+  );
   return 'Opening japanese resume...';
 };
 
