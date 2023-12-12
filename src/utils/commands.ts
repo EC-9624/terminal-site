@@ -132,8 +132,8 @@ export const projects = (): Promise<string> => {
       console.log(data);
       const projectInfo = data
         .map(
-          (d: { name: string; html_url: string }) =>
-            ` <a href="${d.html_url}" style="text-decoration: underline;" target="_blank">${d.name}</a>`,
+          (d: { name: string; url: string }) =>
+            ` <a href="${d.url}" style="text-decoration: underline;" target="_blank">${d.name}</a>`,
         )
         .join('<br>');
       return `<p>Here are pinned projects on my GitHub!</p>${projectInfo}
