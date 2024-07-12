@@ -59,10 +59,10 @@ export const resume = (): string => {
   return 'Opening resume...';
 };
 
-export const rirekisho = (): string => {
-  window.open(`${config.resume_jp_url}`);
-  return 'Opening japanese resume...';
-};
+// export const rirekisho = (): string => {
+//   window.open(`${config.resume_jp_url}`);
+//   return 'Opening japanese resume...';
+// };
 
 export const repo = (): string => {
   window.open(config.repo);
@@ -168,7 +168,7 @@ export const help = (): string => {
     linkedin: 'Open LinkedIn.',
     email: 'Display email address.',
     resume: 'Open resume.',
-    rirekisho: 'Open Japanese resume .',
+    //rirekisho: 'Open Japanese resume .',
     repo: 'Display GitHub repository information.',
     summary: 'Display a summary.',
     readme: 'Display Github readme.',
