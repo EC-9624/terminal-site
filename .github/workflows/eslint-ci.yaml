@@ -1,5 +1,7 @@
 name: eslint CI
-on: [push]
+on:
+  workflow_dispatch:
+  push:
 jobs:
   ci:
     runs-on: ubuntu-latest
