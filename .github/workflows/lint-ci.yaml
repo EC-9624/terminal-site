@@ -1,0 +1,22 @@
+name: lint CI
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Use Node.js 22.x
+        id: tests-workflow
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Oxlint Lint
+        run: npm run lint:ci

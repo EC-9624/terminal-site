@@ -1,0 +1,17 @@
+{
+  "plugins": ["react"],
+  "categories": {
+    "correctness": "deny",
+    "suspicious": "deny"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn",
+    "react/only-export-components": [
+      "warn",
+      {"allowConstantExport": true}
+    ]
+  },
+  "ignorePatterns": ["dist", "node_modules"]
+}

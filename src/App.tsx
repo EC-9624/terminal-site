@@ -24,14 +24,13 @@ const App: React.FC = () => {
     setLastCommandIndex,
   } = useHistory([]); // hooks from useHistory
 
-  const init = React.useCallback(() => setHistory(banner()), []);
+  useEffect(() => {
+    setHistory(banner());
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- setHistory is recreated every render by useHistory
+  }, []);
 
   useEffect(() => {
-    init();
-  }, [init]);
-
-  useEffect(() => {
-    if (inputRef.current) {
+    if (history.length > 0 && inputRef.current) {
       inputRef.current.scrollIntoView();
       inputRef.current.focus({ preventScroll: true });
     }

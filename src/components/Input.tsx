@@ -20,8 +20,8 @@ any) {
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     const commands: [string] = history
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .map(({ command }: any) => command)
-      .filter((command: string) => command);
+      .map(({command: historyCommand}: any) => historyCommand)
+      .filter((cmd: string) => cmd);
 
     if (event.key === 'c' && event.ctrlKey) {
       event.preventDefault();
